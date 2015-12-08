@@ -15,7 +15,7 @@ public class LoadAppActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message message) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(2000);
                 load();
             }
             catch (InterruptedException e) {

@@ -18,7 +18,8 @@
         android:id="@+id/createAGroup"
         android:text="create a group"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:editable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -62,5 +63,23 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subject"
+        android:layout_below="@+id/createAGroup"
+        android:layout_centerHorizontal="true"
+        android:text="subject"
+        android:editable="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/course"
+        android:layout_below="@+id/subject"
+        android:layout_centerHorizontal="true"
+        android:text="course"
+        android:editable="false" />
 
 </RelativeLayout>

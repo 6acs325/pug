@@ -18,7 +18,8 @@
         android:id="@+id/title"
         android:text="title"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:editable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -26,7 +27,8 @@
         android:id="@+id/location"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
-        android:text="location" />
+        android:text="location"
+        android:editable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -34,7 +36,8 @@
         android:id="@+id/capacity"
         android:layout_below="@+id/location"
         android:layout_centerHorizontal="true"
-        android:text="capacity" />
+        android:text="capacity"
+        android:editable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -42,7 +45,8 @@
         android:id="@+id/duration"
         android:layout_below="@+id/capacity"
         android:layout_centerHorizontal="true"
-        android:text="duration" />
+        android:text="duration"
+        android:editable="false" />
 
     <Button
         android:layout_width="fill_parent"
@@ -59,5 +63,24 @@
         android:id="@+id/viewGroupInformation"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="view group information" />
+        android:text="view group information"
+        android:editable="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subject"
+        android:layout_below="@+id/viewGroupInformation"
+        android:layout_centerHorizontal="true"
+        android:text="subject"
+        android:editable="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/course"
+        android:layout_below="@+id/subject"
+        android:layout_centerHorizontal="true"
+        android:text="course"
+        android:editable="false" />
 </RelativeLayout>

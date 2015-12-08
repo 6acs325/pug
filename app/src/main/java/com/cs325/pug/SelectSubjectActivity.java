@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -45,14 +46,14 @@ public class SelectSubjectActivity extends AppCompatActivity {
         };
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,
-                R.layout.subject_list_item,
+                R.layout.list_item,
                 R.id.textView,
                 subjectArray
         );
 
-        ListView listView=(ListView)findViewById(R.id.listView);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(
+        ListView subjectList=(ListView)findViewById(R.id.subjectList);
+        subjectList.setAdapter(adapter);
+        subjectList.setOnItemClickListener(
             new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> list, View v, int pos, long id) {
                     TextView view = (TextView)findViewById(R.id.textView);

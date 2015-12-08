@@ -2,10 +2,9 @@ package com.cs325.pug;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -22,18 +21,16 @@ public class SelectCourseActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            String value = extras.getString("subject");
-        }
+        final String subject = extras.getString("subject");
 
-        int firstDigit = value.hashCode() % 6 + 1;
+        int firstDigit = subject.hashCode() % 6 + 1;
         int secondDigit = 0;
         int thirdDigits[] = new int[firstDigit];
         for (int i = 0; i < firstDigit; i++) {
-            thirdDigits[i] = value.hashCode() % 3 + 1;
+            thirdDigits[i] = subject.hashCode() % 3 + 1;
         }
 
-        String[] subjectArray = {
+        String[] courseArray = {
                 "101",
                 "102",
                 "103",
@@ -55,20 +52,21 @@ public class SelectCourseActivity extends AppCompatActivity {
         };
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,
-                R.layout.course_list_item,
+                R.layout.list_item,
                 R.id.textView,
                 courseArray
         );
 
-        ListView listView=(ListView)findViewById(R.id.listView);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(
+        ListView courseList=(ListView)findViewById(R.id.courseList);
+        courseList.setAdapter(adapter);
+        courseList.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> list, View v, int pos, long id) {
                         TextView view = (TextView)findViewById(R.id.textView);
-                        String subject = view.getText().toString();
+                        String course = view.getText().toString();
                         Intent i = new Intent(getApplicationContext(), SelectGroupActivity.class);
                         i.putExtra("subject", subject);
+                        i.putExtra("course", course);
                         startActivity(i);
                     }
                 }
