@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PUG</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_loading">LoadingActivity</string>
+    <string name="title_activity_subject">SubjectActivity</string>
+    <string name="title_activity_course">CourseActivity</string>
+    <string name="title_activity_groups">GroupsActivity</string>
+    <string name="title_activity_create">CreateActivity</string>
+    <string name="title_activity_join">JoinActivity</string>
+    <string name="title_activity_view_group">ViewGroupActivity</string>
+    <string name="title_activity_load_app">LoadAppActivity</string>
+    <string name="title_activity_select_subject">SelectSubjectActivity</string>
+    <string name="title_activity_select_course">SelectCourseActivity</string>
+    <string name="title_activity_select_group">SelectGroupActivity</string>
+    <string name="title_activity_join_group">JoinGroupActivity</string>
+    <string name="title_activity_create_group">CreateGroupActivity</string>
+</resources>
