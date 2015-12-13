@@ -30,6 +30,7 @@ public class LoadAppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_load_app);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        toolbar.setTitle("Pick Up Group");
         setSupportActionBar(toolbar);
         loadHandler.handleMessage(null);
     }

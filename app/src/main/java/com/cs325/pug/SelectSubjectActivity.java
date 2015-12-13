@@ -18,6 +18,7 @@ public class SelectSubjectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_subject);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Pick Up Group");
         setSupportActionBar(toolbar);
 
         String[] subjectArray = {
@@ -47,19 +48,18 @@ public class SelectSubjectActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,
                 R.layout.list_item,
-                R.id.textView,
+                R.id.item,
                 subjectArray
         );
 
-        ListView subjectList=(ListView)findViewById(R.id.subjectList);
-        subjectList.setAdapter(adapter);
-        subjectList.setOnItemClickListener(
+        final ListView listView = (ListView)findViewById(R.id.listView);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(
             new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> list, View v, int pos, long id) {
-                    TextView view = (TextView)findViewById(R.id.textView);
-                    String subject = view.getText().toString();
+                    String selection = (String)listView.getItemAtPosition(pos);
                     Intent i = new Intent(getApplicationContext(), SelectCourseActivity.class);
-                    i.putExtra("subject", subject);
+                    i.putExtra("subject", selection);
                     startActivity(i);
                 }
             }

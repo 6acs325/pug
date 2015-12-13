@@ -1,6 +1,7 @@
 package com.cs325.pug;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,6 +18,7 @@ public class ViewGroupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_group);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Pick Up Group");
         setSupportActionBar(toolbar);
 
         Bundle extras = getIntent().getExtras();
@@ -42,11 +44,12 @@ public class ViewGroupActivity extends AppCompatActivity {
         textView = (TextView)findViewById(R.id.duration);
         textView.setText(duration);
 
-        Button leave = (Button)findViewById(R.id.leave);
-        leave.setOnClickListener(
+        Button button = (Button)findViewById(R.id.button);
+        button.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(final View v) {
+                        v.setBackgroundColor(Color.rgb(64, 64, 64));
                         Intent i = new Intent(getApplicationContext(), SelectGroupActivity.class);
                         i.putExtra("subject", subject);
                         i.putExtra("course", course);
@@ -54,7 +57,5 @@ public class ViewGroupActivity extends AppCompatActivity {
                     }
                 }
         );
-
     }
-
 }

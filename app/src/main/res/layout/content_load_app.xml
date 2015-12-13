@@ -19,5 +19,6 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:text="loading..."
-        android:editable="false" />
+        android:editable="false"
+        android:inputType="none" />
 </RelativeLayout>

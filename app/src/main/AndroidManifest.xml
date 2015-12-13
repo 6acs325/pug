@@ -15,9 +15,10 @@
         <activity
             android:name=".LoadAppActivity"
             android:label="@string/title_activity_load_app"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -40,6 +41,14 @@
         <activity
             android:name=".CreateGroupActivity"
             android:label="@string/title_activity_create_group"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EditGroupActivity"
+            android:label="@string/title_activity_edit_group"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LeaderViewGroupActivity"
+            android:label="@string/title_activity_leader_view_group"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

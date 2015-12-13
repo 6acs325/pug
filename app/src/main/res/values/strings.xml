@@ -14,4 +14,9 @@
     <string name="title_activity_select_group">SelectGroupActivity</string>
     <string name="title_activity_join_group">JoinGroupActivity</string>
     <string name="title_activity_create_group">CreateGroupActivity</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_edit_group">EditGroupActivity</string>
+    <string name="title_activity_leader_view_group">LeaderViewGroupActivity</string>
 </resources>

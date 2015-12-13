@@ -11,55 +11,50 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class JoinGroupActivity extends AppCompatActivity {
+public class LeaderViewGroupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_join_group);
+        setContentView(R.layout.activity_leader_view_group);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Pick Up Group");
         setSupportActionBar(toolbar);
 
         Bundle extras = getIntent().getExtras();
         final String subject = extras.getString("subject");
         final String course = extras.getString("course");
         final String title = extras.getString("title");
-        final String location = "USpace";
-        final String capacity = "2 / 3 people";
-        final String duration = "90 minutes";
+        final String location = extras.getString("location");
+        final String capacity = extras.getString("capacity");
+        final String duration = extras.getString("duration");
 
-        TextView textView = (TextView)findViewById(R.id.selection1);
-        textView.setText(subject);
-        textView = (TextView)findViewById(R.id.selection2);
-        textView.setText(course);
-        textView = (TextView)findViewById(R.id.selection3);
-        textView.setText(title);
-
-        textView = (TextView)findViewById(R.id.subject);
+        TextView textView = (TextView)findViewById(R.id.subject);
         textView.setText(subject);
         textView = (TextView)findViewById(R.id.course);
         textView.setText(course);
-
         textView = (TextView)findViewById(R.id.title);
         textView.setText(title);
         textView = (TextView)findViewById(R.id.location);
         textView.setText(location);
+
         textView = (TextView)findViewById(R.id.capacity);
         textView.setText(capacity);
         textView = (TextView)findViewById(R.id.duration);
         textView.setText(duration);
 
-
-        Button back = (Button)findViewById(R.id.back);
-        back.setOnClickListener(
+        Button edit = (Button)findViewById(R.id.edit);
+        edit.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(final View v) {
                         v.setBackgroundColor(Color.rgb(64, 64, 64));
-                        Intent i = new Intent(getApplicationContext(), SelectGroupActivity.class);
+                        Intent i = new Intent(getApplicationContext(), EditGroupActivity.class);
                         i.putExtra("subject", subject);
                         i.putExtra("course", course);
+                        i.putExtra("title", title);
+                        i.putExtra("location", location);
+                        i.putExtra("capacity", capacity);
+                        i.putExtra("duration", duration);
                         startActivity(i);
                     }
                 }
@@ -71,13 +66,9 @@ public class JoinGroupActivity extends AppCompatActivity {
                     @Override
                     public void onClick(final View v) {
                         v.setBackgroundColor(Color.rgb(64, 64, 64));
-                        Intent i = new Intent(getApplicationContext(), ViewGroupActivity.class);
+                        Intent i = new Intent(getApplicationContext(), SelectGroupActivity.class);
                         i.putExtra("subject", subject);
                         i.putExtra("course", course);
-                        i.putExtra("title", title);
-                        i.putExtra("location", location);
-                        i.putExtra("capacity", capacity);
-                        i.putExtra("duration", duration);
                         startActivity(i);
                     }
                 }

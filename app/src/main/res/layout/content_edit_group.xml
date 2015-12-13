@@ -10,8 +10,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.cs325.pug.ViewGroupActivity"
-    tools:showIn="@layout/activity_view_group">
+    tools:context="com.cs325.pug.EditGroupActivity"
+    tools:showIn="@layout/activity_edit_group">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -77,7 +77,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:id="@+id/section1"
             android:layout_weight=".25"
-            android:background="#404040"
+            android:background="#E0E0E0"
             android:alpha=".5" />
 
         <TextView
@@ -86,7 +86,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:id="@+id/section2"
             android:layout_weight=".25"
-            android:background="#404040"
+            android:background="#D0D0D0"
             android:alpha=".5" />
 
         <TextView
@@ -95,7 +95,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:id="@+id/section3"
             android:layout_weight=".25"
-            android:background="#404040"
+            android:background="#C0C0C0"
             android:alpha=".5" />
 
         <TextView
@@ -118,7 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Group details"
+            android:text="Edit your group"
             android:id="@+id/subtitle"
             android:alpha=".5" />
     </LinearLayout>
@@ -173,11 +173,10 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp" />
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="title"
             android:id="@+id/title"
             android:layout_alignWithParentIfMissing="false"
             android:layout_below="@+id/course"
@@ -189,13 +188,16 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp" />
+            android:paddingBottom="10dp"
+            android:hint="title"
+            android:paddingLeft="-1dp"
+            android:maxLines="1"
+            android:lines="1" />
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="location"
             android:id="@+id/location"
             android:layout_alignWithParentIfMissing="false"
             android:layout_below="@+id/title"
@@ -204,9 +206,13 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp" />
+            android:paddingBottom="10dp"
+            android:hint="location"
+            android:paddingLeft="-1dp"
+            android:maxLines="1"
+            android:lines="1" />
 
-        <TextView
+        <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -221,7 +227,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp" />
 
-        <TextView
+        <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -261,8 +267,7 @@
                     android:background="#f0f0f0"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:visibility="gone" />
+                    android:layout_alignParentStart="true" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -276,12 +281,13 @@
                 <Button
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="leave"
+                    android:text="save"
                     android:id="@+id/button"
-                    android:background="#c0c0c0"
+                    android:background="#80c080"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_gravity="bottom" />
+                    android:layout_gravity="bottom"
+                    android:clickable="true" />
             </RelativeLayout>
 
         </LinearLayout>
