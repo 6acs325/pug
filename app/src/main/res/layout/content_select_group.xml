@@ -86,7 +86,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:id="@+id/section2"
             android:layout_weight=".25"
-            android:background="#C0C0C0"
+            android:background="#b0b0b0"
             android:alpha=".5" />
 
         <TextView
@@ -104,7 +104,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:id="@+id/section4"
             android:layout_weight=".25"
-            android:background="#D0D0D0"
+            android:background="#b0b0b0"
             android:alpha=".5" />
 
     </LinearLayout>
