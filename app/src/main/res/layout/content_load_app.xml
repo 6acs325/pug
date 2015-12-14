@@ -12,7 +12,7 @@
     tools:context="com.cs325.pug.LoadAppActivity"
     tools:showIn="@layout/activity_load_app">
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/loading"

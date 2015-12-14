@@ -4,13 +4,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".ViewGroupActivity"
             android:label="@string/title_activity_view_group"
+            android:parentActivityName=".JoinGroupActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoadAppActivity"
@@ -25,31 +26,43 @@
         <activity
             android:name=".SelectSubjectActivity"
             android:label="@string/title_activity_select_subject"
+            android:parentActivityName=".LoadAppActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SelectCourseActivity"
             android:label="@string/title_activity_select_course"
+            android:parentActivityName=".SelectSubjectActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SelectGroupActivity"
             android:label="@string/title_activity_select_group"
+            android:parentActivityName=".SelectCourseActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".JoinGroupActivity"
             android:label="@string/title_activity_join_group"
+            android:parentActivityName=".SelectGroupActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CreateGroupActivity"
             android:label="@string/title_activity_create_group"
+            android:parentActivityName=".SelectGroupActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EditGroupActivity"
             android:label="@string/title_activity_edit_group"
+            android:parentActivityName=".LeaderViewGroupActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LeaderViewGroupActivity"
             android:label="@string/title_activity_leader_view_group"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:parentActivityName=".CreateGroupActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name=".NotificationDeleteReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
     </application>
 
 </manifest>

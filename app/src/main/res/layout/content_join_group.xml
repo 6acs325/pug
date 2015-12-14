@@ -118,7 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Confirm joining a group"
+            android:text="Confirm group selection"
             android:id="@+id/subtitle"
             android:alpha=".5" />
     </LinearLayout>

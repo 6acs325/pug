@@ -1,5 +1,6 @@
 package com.cs325.pug;
 
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,28 +12,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 public class LoadAppActivity extends AppCompatActivity {
-    class LoadHandler extends Handler {
-        @Override
-        public void handleMessage(Message message) {
-            try {
-                Thread.sleep(2000);
-                load();
-            }
-            catch (InterruptedException e) {
-
-            }
+    private Handler handler = new Handler();
+    private Runnable runnable = new Runnable(){
+        public void run() {
+            load();
         }
-    }
-    LoadHandler loadHandler = new LoadHandler();
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_load_app);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        toolbar.setTitle("Pick Up Group");
+        toolbar.setTitle("Pick Up Group");
         setSupportActionBar(toolbar);
-        loadHandler.handleMessage(null);
+        handler.postDelayed(runnable, 2000);
     }
 
     private void load() {
